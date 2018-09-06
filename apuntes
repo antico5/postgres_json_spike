@@ -1,0 +1,29 @@
+HSTORE
+
+- Key/value based store
+- Doesn't allow nesting
+- Supports only strings
+
+JSON
+
+- Is stored as text
+- Indentation and formatting is kept
+- Postgres validates it's json
+- Good write throughput
+- Good if you don't query it as much
+
+JSONB
+
+- JSON Better
+- It's compressed
+- Allows nested structures
+- Allows all basic data types
+
+
+Good use cases:
+- Tracking events with lots of different metadata
+- Games or applications where schema is flexible and changes over time
+- Models that have diverse attributes associated. I.e Products -> Books (author, publish date), clothes(color, sizes), cellphones(camera, ram, screen size)
+
+My use case
+- Tracking of creation, update and deletion of records
